@@ -12,6 +12,9 @@ assets/*.mp4
 # Lock de sessão de ferramenta, não é do projeto
 .claude/
 
+# Saída gerada pelo skill de vídeo de divulgação (/brag)
+brag-output/
+
 # Lixo de sistema operacional
 .DS_Store
 Thumbs.db
