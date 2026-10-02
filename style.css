@@ -1138,6 +1138,7 @@ code {
   transition: transform .2s var(--ease), border-color .2s;
 }
 .shot:hover { transform: translateY(-3px); border-color: var(--accent); }
+.shot:active { transform: translateY(-1px) scale(.98); }
 
 .shot::before {                /* nome do módulo */
   content: attr(data-title);
@@ -1390,6 +1391,7 @@ video.ok ~ .play {
   transition: transform .18s var(--ease), border-color .18s;
 }
 .ccard:hover { transform: translateY(-3px); border-color: var(--accent); }
+.ccard:active { transform: translateY(-1px) scale(.98); }
 .ctag { font-family: var(--mono); font-size: .74rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--accent); }
 .ccard strong { font-size: .93rem; font-weight: 600; color: var(--text); word-break: break-word; }
 
@@ -1682,7 +1684,9 @@ video.ok ~ .play {
   grid-template-columns: 1fr 1fr;
   gap: .65rem 2rem;
   padding: 1.2rem 0;
-  align-self: start;
+  /* mais baixa que o texto ao lado (.about tem align-items:start) — centralizar
+     evita um vão solto embaixo da grade quando a bio tem mais linhas. */
+  align-self: center;
 }
 .overview::before {           /* divisor vertical tracejado entre as colunas */
   content: "";

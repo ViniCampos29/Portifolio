@@ -15,6 +15,9 @@ assets/*.mp4
 # Saída gerada pelo skill de vídeo de divulgação (/brag)
 brag-output/
 
+# Skills instaladas via npx (skills.sh), não são do projeto
+.agents/skills/
+
 # Lixo de sistema operacional
 .DS_Store
 Thumbs.db
